@@ -6,17 +6,17 @@
     <v-card-text>
       <v-container>
         <v-row>
-          <v-col 
+          <v-col
             cols="6"
             sm="4"
             md="4"
             lg="4"
             xl="4">
             <v-select
-              dark 
+              dark
               v-model="timeLimitation"
               :items="timeLimitationItems"></v-select>
-          </v-col>          
+          </v-col>
         </v-row>
       </v-container>
     </v-card-text>
@@ -25,12 +25,12 @@
       <v-btn
         dark
         depressed
-        color="#FF5252"
+        color="#43B581"
         @click="setTimeLimitation">{{ $t('CardRoomTime.next') }}</v-btn>
       <v-btn
         dark
         depressed
-        color="#43B581"
+        color="#FF5252"
         @click="cancel">{{ $t('CardRoomTime.cancel') }}</v-btn>
     </v-card-actions>
   </v-card>
@@ -65,7 +65,7 @@
           {
             text: '5',
             value: 5,
-          }, 
+          },
           {
             text: '6',
             value: 6,
@@ -85,7 +85,7 @@
           {
             text: '10',
             value: 10,
-          },          
+          },
         ],
       }
     },
@@ -107,5 +107,5 @@
     font-weight: 500;
     color: #FFFFFF;
     opacity: 0.9;
-  } 
+  }
 </style>

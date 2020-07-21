@@ -13,7 +13,7 @@
               autofocus
               :error-messages="errorMessage"
               v-model="roomName"></v-text-field>
-          </v-col>          
+          </v-col>
         </v-row>
       </v-container>
     </v-card-text>
@@ -22,12 +22,12 @@
       <v-btn
         dark
         depressed
-        color="#FF5252"
+        color="#43B581"
         @click="searchRoom">{{ $t('CardRoomName.next') }}</v-btn>
       <v-btn
         dark
         depressed
-        color="#43B581"
+        color="#FF5252"
         @click="cancel">{{ $t('CardRoomName.cancel') }}</v-btn>
     </v-card-actions>
   </v-card>
@@ -61,5 +61,5 @@
     font-weight: 500;
     color: #FFFFFF;
     opacity: 0.9;
-  } 
+  }
 </style>

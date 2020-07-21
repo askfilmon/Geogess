@@ -7,11 +7,11 @@
       <v-container>
         <v-row>
           <v-col cols="12">
-              <v-text-field 
+              <v-text-field
                 dark
                 maxlength="10"
                 v-model="playerName"></v-text-field>
-           </v-col>       
+           </v-col>
         </v-row>
       </v-container>
     </v-card-text>
@@ -20,12 +20,12 @@
       <v-btn
         dark
         depressed
-        color="#FF5252"
+        color="#43B581"
         @click="setPlayerName">{{ $t('CardRoomPlayerName.next') }}</v-btn>
       <v-btn
         dark
         depressed
-        color="#43B581"
+        color="#FF5252"
         @click="cancel">{{ $t('CardRoomPlayerName.cancel') }}</v-btn>
     </v-card-actions>
   </v-card>
@@ -35,7 +35,7 @@
   export default {
     data() {
       return {
-        playerName: '',     
+        playerName: '',
       }
     },
     methods: {
@@ -56,5 +56,5 @@
     font-weight: 500;
     color: #FFFFFF;
     opacity: 0.9;
-  } 
+  }
 </style>
