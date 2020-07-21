@@ -7,11 +7,14 @@
       <v-container>
         <v-row>
           <v-col cols="4">
-            <v-select 
+            <v-text-field
+              autofocus
               dark
               v-model="roomSize"
-              :items="roomSizeItems"></v-select>
-          </v-col>        
+              :rules="[rules.required, rules.range]"
+            >
+            </v-text-field>
+          </v-col>
         </v-row>
       </v-container>
     </v-card-text>
@@ -36,24 +39,10 @@
     data() {
       return {
         roomSize: 2,
-        roomSizeItems: [
-          {
-            text: '2',
-            value: 2,
-          },
-          {
-            text: '3',
-            value: 3,
-          },
-          {
-            text: '4',
-            value: 4,
-          },
-          {
-            text: '5',
-            value: 5,
-          },          
-        ],
+        rules: {
+          required: value => !!value || 'Required.',
+          range: value => (value >= 2 && value <= 20) || '2 - 20 Players',
+        }
       }
     },
     methods: {
@@ -74,5 +63,5 @@
     font-weight: 500;
     color: #FFFFFF;
     opacity: 0.9;
-  } 
+  }
 </style>
